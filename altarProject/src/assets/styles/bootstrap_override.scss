@@ -1,0 +1,62 @@
+// USE THIS FILE TO OVERRIDE BOOTSTRAP CSS
+
+@import './variables';
+.form-control {
+  border: 1px solid $main-color;
+}
+
+label {
+  color: $main-color;
+}
+
+.input-group-append .btn {
+  border-top-right-radius: 3.5px !important;
+  border-bottom-right-radius: 3.5px !important;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: $main-color;
+  border-color: $main-color;
+}
+
+.input-group-append {
+  color: $main-color;
+}
+
+.btn-outline-secondary {
+  color: $main-color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $main-color;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: $main-color;
+    background-image: none;
+    border-color: $main-color;
+  }
+}
+
+ngb-datepicker-navigation {
+  .btn-link {
+    font-weight: 400;
+    color: $main-color;
+    background-color: transparent;
+  }
+
+
+}
+
+ngb-datepicker-month-view{
+  .ngb-dp-weekday{
+    color: $main-color !important;
+  }
+}

@@ -1,0 +1,20 @@
+.transparent-input{
+  background-color:rgba(0,0,0,0) !important;
+  border:none !important;
+}
+
+.transparent-input-char{
+  background-color:rgba(0,0,0,0) !important;
+  border: solid ;
+  border-width: thin;
+}
+
+.reddot {
+  height: 8px;
+  width: 8px;
+  background-color: rgb(194, 18, 18);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+

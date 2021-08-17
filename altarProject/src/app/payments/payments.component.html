@@ -1,0 +1,36 @@
+<main class="live-light-theme">  
+  <h3 class="main-color">Client - Payments Page</h3>
+    <form [formGroup]="formGroup">
+      <div class="form-inline justify-content-center">        
+          <span class="reddot"></span>
+          <input  matInput type="text"  class = "transparent-input" value="LIVE"/>        
+      </div>
+      <BR/>
+      <div class="form-inline justify-content-center">       
+          <label>Your Code:</label>
+          <input  matInput type="text" maxlength="2"  class = "transparent-input"  formControlName="your_code" disabled [(ngModel)]="your_code"> 
+      </div>  
+      <div class="form-inline">
+          <div class="form-group">          
+              <label class="transparent-input col-md-4">Payment  </label>
+              <input matInput maxlength="10" class = "form-control col-md-4"  type="text" formControlName="payment_name"  [(ngModel)]="payment_name">
+          </div> 
+          <div class="form-group">          
+              <label class="transparent-input col-md-4">Amount  </label>
+              <input matInput  maxlength="4" class = "form-control col-md-4"  type="number" formControlName="payment_amount"  [(ngModel)]="payment_amount">
+          </div>
+          <div class="form-group">
+            <label class="transparent-input col-md-4" hidden > </label>      
+            <button class="btn btn-primary mb-2" #add_payment_btn (click)="add_payment()" type="button">
+              <span>+Add</span>          
+            </button>              
+          </div>         
+        </div>
+      <br/>
+      <h4>Payment List</h4>
+      <br/>
+      <div>     
+        <app-table-payments id="payments_table" [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-table-payments>
+      </div>      
+  </form>
+</main>

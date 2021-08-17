@@ -1,0 +1,24 @@
+<mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef >Name</mat-header-cell>
+        <mat-cell *matCellDef="let element" > {{element.name}} </mat-cell>
+    </ng-container>    
+    <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef >Amount</mat-header-cell>
+        <mat-cell *matCellDef="let element" > {{element.amount}} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="code">
+        <mat-header-cell *matHeaderCellDef >Code</mat-header-cell>
+        <mat-cell *matCellDef="let element" > {{element.code}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="grid_code">
+        <mat-header-cell *matHeaderCellDef >Grid</mat-header-cell>
+        <mat-cell *matCellDef="let element" > {{element.grid_code}} </mat-cell>
+    </ng-container>  
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+

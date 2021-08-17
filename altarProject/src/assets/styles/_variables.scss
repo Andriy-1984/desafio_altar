@@ -1,0 +1,251 @@
+@charset 'UTF-8';
+
+/*** DEFINITIONS ***/
+$app-breakpoint-min: 320px;
+$app-breakpoint-xs: 600px;
+$app-breakpoint-sm: 960px;
+$app-breakpoint-md: 1280px;
+$app-breakpoint-lg: 1920px;
+
+$app-base-font-size: 10;
+$app-base-font-size-px: ($app-base-font-size + px) !default;
+$app-base-line-height: 1.444;
+
+$main-color:#d1005d;
+$main-transparency-color:rgba(209, 0, 93, 0.1);
+$main-transparency-color-2:rgba(209, 0, 93, 0.4);
+$main-transparency-color-3:rgba(209, 0, 93, 0.6);
+
+$generator-color:#90278e;
+$payments-color:#00adee;
+
+$app-base-color-material-cyan-400: #26C6DA;// Material Colors: https://material.google.com/style/color.html#color-color-palette
+$app-base-color-material-cyan-600: #00ACC1;
+$app-base-color-material-cyan-700: #0097A7;
+$app-base-color-material-cyan-800: #00838F;
+$app-base-color-material-cyan-900: #006064;
+$app-base-color-material-blue-grey-10: #F5F8FA;
+$app-base-color-material-blue-grey-50: #ECEFF1;
+$app-base-color-material-blue-grey-100: #CFD8DC;
+$app-base-color-material-blue-grey-200: #B0BEC5;
+$app-base-color-material-blue-grey-300: #90A4AE;
+$app-base-color-material-blue-grey-400: #78909C;
+$app-base-color-material-blue-grey-500: #607D8B;
+$app-base-color-material-blue-grey-700: #455A64;
+$app-base-color-material-blue-grey-800: #37474F;
+$app-base-color-material-blue-grey-900: #263238;
+$app-base-color-material-grey-900: #212121;
+$app-base-color-material-amber-600: #FFB300;
+$app-base-color-material-amber-800: #FF8F00;
+$app-base-color-material-red-600: #E53A35;
+$app-base-color-material-light-blue-400: #29B6F6;
+$app-base-color-material-light-blue-600: #039BE5;
+$app-base-color-material-light-green-600: #7CB342;
+$app-base-color-material-purple-400:#AB47BC;
+$app-base-color-material-purple-500:#9C27B0;
+$app-base-color-material-purple-200:#CE93D8;
+$app-base-color-1: $app-base-color-material-blue-grey-700;
+$app-base-color-2: $app-base-color-material-blue-grey-800;
+$app-base-color-3: $app-base-color-material-blue-grey-900;
+
+$app-base-color-notification-red: $app-base-color-material-red-600;
+$app-base-color-required: $app-base-color-notification-red;
+
+$app-base-icon-color-warning: $app-base-color-material-amber-600;
+$app-base-icon-color-error: $app-base-color-material-red-600;
+$app-base-icon-color-info: $app-base-color-material-light-blue-600;
+$app-base-icon-color-success: $app-base-color-material-light-green-600;
+
+$app-base-toast-color-warning: $app-base-color-material-amber-600;
+$app-base-toast-color-error: $app-base-color-material-red-600;
+$app-base-toast-color-info: $app-base-color-material-light-blue-600;
+$app-base-toast-color-success: $app-base-color-material-light-green-600;
+
+$app-btn-hover-color-1: #343f45;
+
+$app-transition-text-1: 0.3s ease-out;
+$app-transition-bg-1: 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s;
+$app-transition-height-1: 1s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s;
+
+$app-main-bg-color: $app-base-color-material-blue-grey-50;
+$app-body-bg-color: $app-main-bg-color;
+
+$app-main-text-color: $app-base-color-material-blue-grey-500;
+$app-body-text-color: $app-main-text-color;
+
+$app-main-link-color: $app-base-color-material-light-blue-400;
+$app-main-link-color-hover: #000;
+
+$app-btn-primary-bg-color: $app-base-color-material-cyan-700;
+$app-btn-primary-bg-color-hover: $app-base-color-material-cyan-800;
+$app-btn-primary-bg-color-disabled: $app-base-color-material-blue-grey-300;
+$app-btn-primary-text-color: #fff;
+$app-btn-primary-text-color-disabled: $app-base-color-material-blue-grey-100;
+$app-btn-secondary-bg-color: $app-base-color-material-blue-grey-700;
+$app-btn-secondary-bg-color-hover: $app-base-color-material-blue-grey-800;
+$app-btn-secondary-bg-color-disabled: $app-base-color-material-blue-grey-300;
+$app-btn-secondary-text-color: #fff;
+$app-btn-secondary-text-color-disabled: $app-base-color-material-blue-grey-100;
+$app-btn-toolbar-primary-bg-color: #fff;
+$app-btn-toolbar-primary-bg-color-hover: $app-base-color-material-blue-grey-50;
+$app-btn-toolbar-primary-border-color: $app-base-color-material-cyan-700;
+$app-btn-toolbar-primary-text-color: $app-base-color-material-cyan-700;
+$app-btn-toolbar-primary-text-color-hover: $app-base-color-material-blue-grey-800;
+$app-btn-toolbar-secondary-bg-color: #fff;
+$app-btn-toolbar-secondary-bg-color-hover: $app-base-color-material-blue-grey-50;
+$app-btn-toolbar-secondary-border-color: $app-base-color-material-blue-grey-700;
+$app-btn-toolbar-secondary-text-color: $app-base-color-material-blue-grey-700;
+$app-btn-toolbar-secondary-text-color-hover: $app-base-color-material-blue-grey-800;
+
+$app-font-family-base: Arial, sans-serif;
+
+$app-header-height-1: 46px;
+$app-header-user-btn-width-1: 180px;
+$app-header-btn-text-color: $app-base-color-3;
+
+$app-context-height-1: 35px;
+
+$app-sidebar-left-width-1: 290px;
+$app-sidebar-left-header-height-1: 147px;
+$app-sidebar-left-link-color: $app-base-color-material-cyan-700;
+$app-sidebar-left-link-color-hover: #fff;
+$app-sidebar-left-menu-closebtn-color: #fff;
+
+$app-sidebar-left-tabs-items-height: 30px;
+
+$app-sidebar-left-ribbon-width-1: 45px;
+$app-sidebar-left-ribbon-header-height-1: $app-header-height-1;
+$app-sidebar-left-ribbon-menu-item-height: 35px;
+$app-sidebar-left-ribbon-menu-heading-color: $app-base-color-material-cyan-700;
+
+$app-dialog-default-header-icon-width-1: 39px;
+$app-dialog-default-header-icon-height-1: 44px;
+$app-dialog-default-header-icon-padding-1: 4px 12px 0 0;
+$app-dialog-default-header-icon-color: $app-base-color-material-blue-grey-300;
+$app-dialog-default-header-text-color: $app-base-color-material-blue-grey-800;
+$app-dialog-default-header-border-color: $app-base-color-material-blue-grey-50;
+
+$app-card-default-header-icon-width-1: 39px;
+$app-card-default-header-icon-height-1: 44px;
+$app-card-default-header-icon-padding-1: 4px 12px 0 0;
+$app-card-default-shadow-color-1: rgba(0, 0, 0, 0.2);
+$app-card-default-shadow-color-2: rgba(0, 0, 0, 0.1);
+$app-card-default-shadow-color-3: rgba(0, 0, 0, 0.1);
+$app-card-editmode-shadow-color-1: rgba(0, 172, 193, 0.8);
+$app-card-editmode-shadow-color-2: rgba(0, 172, 193, 0.74);
+$app-card-editmode-shadow-color-3: rgba(0, 172, 193, 0.72);
+$app-card-default-header-text-color: $app-base-color-material-blue-grey-800;
+$app-card-editmode-header-text-color: $app-base-color-material-cyan-700;
+$app-card-default-header-icon-color: $app-base-color-material-blue-grey-300;
+$app-card-default-header-sepline-color: $app-base-color-material-blue-grey-50;
+
+$app-cards-container-bg: $app-base-color-material-blue-grey-50;
+$app-cards-container-bg-darker: $app-base-color-material-blue-grey-100;
+
+$app-filters-form-card-header-icon-height-1: 42px;
+$app-filters-list-card-header-icon-height-1: 42px;
+
+$app-body-page-toolbar-title-text-color: $app-base-color-material-blue-grey-800;
+
+$app-menu-container-bg-color: #fff;
+$app-menu-container-button-color: $app-base-color-material-blue-grey-800;
+$app-menu-container-button-color-hover: $app-base-color-material-blue-grey-900;
+$app-menu-container-button-color-disabled: $app-base-color-material-blue-grey-300;
+
+$app-popover-icon-color: $app-base-color-material-blue-grey-800;
+
+$app-tabs-default-items-height: 36px;
+$app-tabs-default-items-border-color: $app-base-color-material-cyan-700;
+$app-tabs-default-items-text-color: $app-base-color-material-blue-grey-500;
+$app-tabs-default-items-text-color-hover: $app-base-color-material-blue-grey-800;
+$app-tabs-default-items-text-color-active: $app-base-color-material-cyan-700;
+$app-tabs-default-items-text-color-disabled: $app-base-color-material-blue-grey-200;
+$app-tabs-default-items-bg-color-active: #fafafa;
+$app-tabs-default-items-nav-color: $app-base-color-material-blue-grey-500;
+$app-tabs-default-items-nav-color-hover: $app-base-color-material-blue-grey-800;
+$app-tabs-default-items-nav-color-disabled: $app-base-color-material-blue-grey-200;
+
+$app-tabs-workspace-items-height: 61px;
+$app-tabs-workspace-items-bg-color: $app-base-color-material-blue-grey-800;
+$app-tabs-workspace-items-text-color: #fff;
+$app-tabs-workspace-items-text-color-disabled: $app-base-color-material-blue-grey-200;
+$app-tabs-workspace-items-btn-height: 42px;
+$app-tabs-workspace-items-btn-bg-color-hover: $app-base-color-material-blue-grey-700;
+$app-tabs-workspace-items-btn-bg-color-active: $app-base-color-material-blue-grey-900;
+$app-tabs-workspace-items-nav-bg-color: $app-base-color-material-blue-grey-900;
+$app-tabs-workspace-items-nav-color: #fff;
+$app-tabs-workspace-items-nav-color-hover: $app-base-color-material-blue-grey-400;
+$app-tabs-workspace-items-nav-color-disabled: $app-base-color-material-blue-grey-700;
+
+$app-tabs-steps-items-height: 61px;
+$app-tabs-steps-items-bg-color: transparent;
+$app-tabs-steps-items-bg-color-disabled: $app-base-color-material-blue-grey-200;
+$app-tabs-steps-items-text-color: #fff;
+$app-tabs-steps-items-text-color-disabled: $app-base-color-material-blue-grey-100;
+$app-tabs-steps-items-btn-height: 42px;
+$app-tabs-steps-items-btn-bg-color: $app-base-color-material-blue-grey-700;
+$app-tabs-steps-items-btn-bg-color-hover: $app-base-color-material-blue-grey-800;
+$app-tabs-steps-items-btn-bg-color-active: $app-base-color-material-blue-grey-900;
+$app-tabs-steps-items-btn-icon-bg-color: $app-base-color-material-blue-grey-800;
+$app-tabs-steps-items-btn-icon-bg-color-active: $app-base-color-material-cyan-700;
+$app-tabs-steps-items-btn-icon-bg-color-disabled: $app-base-color-material-blue-grey-400;
+$app-tabs-steps-items-body-bg-color: $app-base-color-material-blue-grey-100;
+$app-tabs-steps-items-actions-bg-color: $app-base-color-material-blue-grey-50;
+
+$app-field-label-default-text-color: $app-base-color-material-blue-grey-800;
+$app-field-label-editing-text-color: $app-base-color-material-cyan-700;
+$app-field-label-disabled-text-color: $app-base-color-material-blue-grey-200;
+
+$app-table-head-toolbar-height: 42px;
+$app-table-head-toolbar-border-color: $app-base-color-material-blue-grey-50;
+$app-table-thead-border-color-bottom: $app-base-color-material-cyan-700;
+$app-table-thead-border-color-separation: $app-base-color-material-blue-grey-50;
+$app-table-thead-text-color: $app-base-color-material-blue-grey-800;
+$app-table-tbody-text-color: $app-base-color-material-blue-grey-500;
+$app-table-tbody-border-color-top: $app-base-color-material-blue-grey-50;
+$app-table-tbody-border-color-top-selected: darken( $app-table-tbody-border-color-top, 5% );
+$app-table-tbody-row-bg-color-selected: #f5f5f5;
+$app-table-tbody-row-bg-color-hover: $app-base-color-material-blue-grey-50;
+$app-table-tbody-row-bg-color-expanded: #fafafa;
+$app-table-tbody-row-border-color-expanded: $app-base-color-material-blue-grey-50;
+$app-table-options-btn-border-color: $app-base-color-material-blue-grey-50;
+$app-table-options-btn-border-color-hover: $app-base-color-material-cyan-700;
+$app-table-row-btn-collapse-color: $app-base-color-material-blue-grey-800;
+$app-table-tbody-cell-editable-text-color: $app-base-color-material-blue-grey-900;
+$app-table-tbody-cell-editable-bg-color: rgba(0, 172, 193, 1);
+$app-table-tbody-cell-editable-select-icon-color: $app-base-color-material-cyan-700;
+$app-table-tbody-cell-editable-select-icon-color-hover: $app-base-color-material-blue-grey-800;
+$app-table-pagination-border-top-color: $app-base-color-material-blue-grey-50;
+$app-table-pagination-label-color: $app-base-color-material-blue-grey-800;
+$app-table-pagination-select-border-color: $app-base-color-material-blue-grey-50;
+$app-table-pagination-select-text-color: $app-base-color-material-cyan-700;
+$app-table-pagination-select-text-color-hover: $app-base-color-material-blue-grey-800;
+
+$app-progress-bar-color-1: $app-base-color-material-cyan-700;
+$app-progress-bar-color-2: desaturate( lighten( $app-progress-bar-color-1, 30% ), 40% );
+
+$app-radiobtn-unselected-border-color: $app-base-color-material-blue-grey-100;
+$app-radiobtn-unselected-text-color: $app-base-color-material-blue-grey-800;
+$app-radiobtn-selected-border-color: $app-base-color-material-cyan-700;
+$app-radiobtn-selected-text-color: $app-base-color-material-blue-grey-800;
+$app-radiobtn-disabled-border-color: $app-base-color-material-blue-grey-100;
+$app-radiobtn-disabled-text-color: $app-base-color-material-blue-grey-100;
+$app-radiobtn-ripple-color: rgba(0,151,167,0.26);
+
+$app-checkbox-unselected-border-color: $app-base-color-material-blue-grey-100;
+$app-checkbox-unselected-text-color: $app-base-color-material-blue-grey-800;
+$app-checkbox-selected-border-color: $app-base-color-material-cyan-700;
+$app-checkbox-selected-text-color: $app-base-color-material-blue-grey-800;
+$app-checkbox-disabled-border-color: $app-base-color-material-blue-grey-100;
+$app-checkbox-disabled-text-color: $app-base-color-material-blue-grey-100;
+$app-checkbox-ripple-color: rgba(0,151,167,0.26);
+$app-checkbox-table-thead-border-color: $app-base-color-material-blue-grey-800;
+$app-checkbox-table-thead-border-color-hover: $app-base-color-material-cyan-700;
+
+$app-switch-unselected-bg-color: $app-base-color-material-blue-grey-700;
+$app-switch-unselected-text-color: $app-base-color-material-blue-grey-800;
+$app-switch-selected-bg-color: $app-base-color-material-cyan-700;
+$app-switch-selected-text-color: $app-base-color-material-blue-grey-800;
+$app-switch-disabled-bg-color: $app-base-color-material-blue-grey-100;
+$app-switch-disabled-text-color: $app-base-color-material-blue-grey-100;
+$app-switch-ripple-color: rgba(0,151,167,0.26);

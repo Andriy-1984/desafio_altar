@@ -1,0 +1,42 @@
+@import '../../assets/styles/variables';
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .link-square-generator {
+    width: 100px;
+    height: 100px;
+    background-color: $generator-color;
+    color: #fff;
+  }
+
+  .link-square-payments {
+    width: 100px;
+    height: 100px;
+    background-color: $app-base-color-material-light-green-600;
+    color: #fff;
+  }  
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  a > fa-icon, a > span {
+    font-size: 150%;
+  }
+
+  a > fa-icon {
+    font-size: 150%;
+  }
+
+  a > span {
+    width: 100%;
+    text-align: center;
+  }
+}

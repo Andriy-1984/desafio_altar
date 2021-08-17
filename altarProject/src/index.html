@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=11" />
+  <title>Altar Project</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css">
+    body,
+    html {
+      height: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #ECEFF1;
+      min-width: 320px;
+      min-height: 100%;
+      margin: 0;
+      font-size: 10px;
+    }
+
+
+
+    .container {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #FFF;
+    }
+
+
+
+    .loader {
+      max-width: 15rem;
+      width: 100%;
+      height: auto;
+      stroke-linecap: round;
+      transform: scale(0.5,0.5);
+    }
+
+    circle {
+      fill: none;
+      stroke-width: 3.5;
+      -webkit-animation-name: preloader;
+      animation-name: preloader;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-transform-origin: 170px 170px;
+      transform-origin: 170px 170px;
+      will-change: transform;
+    }
+
+    circle:nth-of-type(1) {
+      stroke-dasharray: 550;
+    }
+
+    circle:nth-of-type(2) {
+      stroke-dasharray: 500;
+    }
+
+    circle:nth-of-type(3) {
+      stroke-dasharray: 450;
+    }
+
+    circle:nth-of-type(4) {
+      stroke-dasharray: 300;
+    }
+
+    circle:nth-of-type(1) {
+      -webkit-animation-delay: -0.15s;
+      animation-delay: -0.15s;
+    }
+
+    circle:nth-of-type(2) {
+      -webkit-animation-delay: -0.3s;
+      animation-delay: -0.3s;
+    }
+
+    circle:nth-of-type(3) {
+      -webkit-animation-delay: -0.45s;
+      animation-delay: -0.45s;
+    }
+
+    circle:nth-of-type(4) {
+      -webkit-animation-delay: -0.6s;
+      animation-delay: -0.6s;
+    }
+
+    @-webkit-keyframes preloader {
+      50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader {
+      50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body >
+  <app-root>
+    <div class="app-loading">
+      <div class="container">
+
+        <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+          <circle id="circle1" cx="170" cy="170" r="160" stroke="rgba(209, 0, 93, 0.1)" />
+          <circle cx="170" cy="170" r="135" stroke="rgba(209, 0, 93, 0.3)" />
+          <circle cx="170" cy="170" r="110" stroke="rgba(209, 0, 93, 0.6)" />
+          <circle cx="170" cy="170" r="85" stroke="#d1005d" />
+        </svg>
+
+      </div>
+    </div>
+  </app-root>
+</body>
+</html>

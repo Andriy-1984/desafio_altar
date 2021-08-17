@@ -1,0 +1,44 @@
+<main class="live-light-theme">
+  <h3 class="main-color">Client - Generator Page</h3>
+    <form [formGroup]="formGroup">
+      <div class="form-inline">
+        <div class="form-group">          
+              <label class="transparent-input col-md-4">Character: </label>
+              <input matInput name="character" size="1" maxlength="1" class = "form-control col-md-4"  type="text" formControlName="character"  [(ngModel)]="character">
+          </div> 
+          <div class="checkbox col-md-4">
+            <fa-icon [icon]="faClock" class="fa-3x align-top"></fa-icon>  
+          </div> 
+          <div class="form-group">      
+            <button class="btn btn-primary mb-2" #generate_grid (click)="start_generator()" type="button">
+              <span>Generate 2D Grid</span>          
+            </button>
+            <button class="btn btn-primary mb-2" id="regenerate_grid" (click)="generate_chars()" type="button" hidden>
+              <span>Regenerate</span>          
+            </button> 
+          </div>         
+        </div>
+      <div class="form-inline">     
+        <app-table-generator [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-table-generator>
+      </div> 
+      <BR/>
+      <div class="row">   
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <span class="reddot"></span><label> LIVE </label>
+        </div>
+        <div class="col-sm-4"></div>  
+      </div>
+      <BR/>
+      <div class="row">   
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <label>Your Code:</label>
+          <input name="code" matInput type="text"  size="2" class = "transparent-input"  formControlName="code" disabled [(ngModel)]="code">
+        </div>
+        <div class="col-sm-4"></div>  
+      </div>      
+  </form>
+</main>
